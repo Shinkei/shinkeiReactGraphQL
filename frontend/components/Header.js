@@ -48,11 +48,11 @@ const Header = () => (
       <StyleHeader>
         <div className="bar">
         <Logo>
-          <Link href="">
+          <Link href="/">
             <a >Sell Things</a>
           </Link>
         </Logo>
-          <Nav />
+        <Nav />
         </div>
         <div className="sub-bar">
           <p>Search</p>
