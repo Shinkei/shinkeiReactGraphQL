@@ -1,7 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 import styled from 'styled-components';
 import Nav from './Nav';
+
+// Router events to handle the ngprogress and give feedback to the user
+Router.onRouteChangeStart = () => {
+  NProgress.start();
+};
+Router.onRouteChangeComplete = () => {
+  NProgress.done();
+};
+Router.onRouteChangeError = () => {
+  NProgress.remove();
+};
+
 
 const Logo = styled.h1`
   font-size: 4rem;
